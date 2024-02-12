@@ -1,0 +1,29 @@
+<div class="custom-container">
+
+    <div class="custom-form">
+      <form (ngSubmit)="save(taskNew)">
+        
+        <div class="mb-3">
+          <label for="taskName" class="form-label">Task Name</label>
+          <input type="text" id="taskName" name="taskName" class="form-control" [(ngModel)]="taskNew.taskName">
+        </div>
+  
+        <div class="mb-3">
+          <label for="taskDescription" class="form-label">Task Description</label>
+          <textarea id="taskDescription" name="taskDescription" class="form-control" [(ngModel)]="taskNew.taskDescription"></textarea>
+        </div>
+  
+        <div class="mb-3">
+          <p for="taskStatus" class="form-label">Task Status</p>
+          <select id="taskStatus" name="taskStatus" [(ngModel)]="taskNew.taskStatus">
+            <option value="ToDO">To-Do</option>
+            <option value="InProgress">In-Progress</option>
+            <option value="Blocked">Blocked</option>
+            <option value="Done">Done</option></select>
+        </div>
+  
+        <button type="submit" class="btn btn-primary" style="background-color: #0F3DA6;">Submit</button>
+      </form>
+    </div>
+  </div>
+  

@@ -1,0 +1,46 @@
+<div class="LoginMain">
+    <div class="LoginMain1">
+        <img src="../../../assets/Signup.png" alt="">
+    </div>
+    <div class="LoginMain2">
+        <h1>SignUp</h1>
+        <h2>Welcome To Family</h2>
+        <div class="container" >
+            <form (ngSubmit) = "save(userobj)">
+
+              
+              <div class="mb-3">
+                <label for="userName" class="" >Username</label>
+                <input type="text" class="form-control" id="userName" name="userName" [(ngModel)] = "userobj.userName" ></div>
+
+
+              <div class="mb-3">
+                <label for="userPassword" class="">Password</label>
+                <input type="password" class="form-control" id="userPassword" name="userPassword" [(ngModel)] = "userobj.userPassword">
+              </div>
+
+              <button type="submit" class="btn btn-primary mb-1">SignUp</button><br>
+              <small>All ready a member? <a (click)="navigateToLogin()">Login</a></small>
+              
+            </form>
+          </div>
+          
+        
+    </div>
+</div>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  

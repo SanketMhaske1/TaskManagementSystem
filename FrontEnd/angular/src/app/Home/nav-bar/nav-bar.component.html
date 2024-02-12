@@ -1,0 +1,109 @@
+<div class="Horizontal-navbar">
+
+    <div class="horizontaldiv1 ">
+      <h2 class="text-white  p-2">Task<span class="text-primary p-2">Mangement</span></h2>
+    </div>
+
+    <div class="horizontaldiv2">
+      <input type="text" id="searchInput" name="searchInput " placeholder="Serach Your Task" >
+    </div>
+  
+    <div class="horizontaldiv3 ">
+      <a (click)="navigateToLogin() ">Logout</a>
+    </div>
+  
+  </div>
+  
+  
+  
+  
+  <div class="hero">
+  
+    <div class="d-flex flex-column flex-shrink-0 p-3  sidebar " style="width: 250px; height: 100vh;">
+  
+  
+      <ul class="nav nav-pills flex-column mb-auto ">
+
+        <li class="nav-item sidebarlink">
+          <a  (click)="navigateToHome()" class="nav-link ">
+            <mat-icon>home</mat-icon>
+            Home
+          </a>
+        </li>
+    
+        <li class="sidebarlink">
+          <a  class="nav-link " (click)="navigateToCreateTask()">
+            <mat-icon>create</mat-icon>
+              Create Task
+          </a>
+        </li>
+    
+        <li class="sidebarlink">
+          <a href="#" class="nav-link ">
+            <mat-icon>person</mat-icon>
+            Profile
+          </a>
+        </li>
+    
+      </ul>
+      
+    </div>
+  
+    <div class="hero2">
+
+    <div class="heromain">
+
+        <div class="heromain1">
+          
+        <h2>Welcome To</h2>
+        <h1>Task Management System</h1>
+        </div>
+
+        <div class="heromain2">
+          <img src="../../../assets/Time management-pana.png" alt="">
+        </div>
+
+
+
+      </div>
+      
+      <div class="container">
+        <div class="row ">
+
+          <div class="col-md-4" *ngFor="let task of taskList">
+
+
+            <div class="card taskCard cardContainer">
+              <div class="taslCardTitle">
+
+
+                <div class="taslCardTitle1">
+                  <h3 class="card-title">{{task.taskStatus}}</h3>
+                </div>
+
+                <div class="taslCardTitle2">
+                  <a (click)="edit(task)"><mat-icon>edit</mat-icon></a>
+                  <a (click)="delete(task)"><mat-icon>delete</mat-icon></a>
+                </div>
+              </div>
+
+              <div class="taskContent">
+                <div class="taskName"><h2>{{task.taskName}}</h2></div>
+                <div class="taskDescription">
+                <h4>  {{task.taskDescription}} </h4></div>
+              </div>
+
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+      
+
+
+    </div>
+
+
+  
